@@ -1,10 +1,10 @@
 ﻿@model Template
 
 
-<form method="post">
+<form method="post" asp-action="Edit">
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
-			<h2 class="text-primary">Create Template</h2>
+			<h2 class="text-primary">Edit Template</h2>
 			<hr />
 		</div>
 		@*<div asp-validation-summary="All"></div>*@
@@ -14,13 +14,12 @@
 			<span asp-validation-for="TemplateName" class="text-danger"></span>
 		</div>
 		
-		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+		<button type="submit" class="btn btn-primary" style="width:150px">Save</button>
 		<a asp-controller="Template" asp-action="Index" class="btn btn-secondary" style="width:150px">
 			Back to List
 		</a>
 	</div>
 </form>
-
 
 
 @section Scripts{
