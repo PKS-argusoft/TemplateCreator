@@ -1,0 +1,12 @@
+F:\argu\c#\Bulky Book\BulkyBook.Models\bin\Debug\net6.0\BulkyBook.Models.deps.json
+F:\argu\c#\Bulky Book\BulkyBook.Models\bin\Debug\net6.0\BulkyBook.Models.dll
+F:\argu\c#\Bulky Book\BulkyBook.Models\bin\Debug\net6.0\BulkyBook.Models.pdb
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\BulkyBook.Models.csproj.AssemblyReference.cache
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\BulkyBook.Models.GeneratedMSBuildEditorConfig.editorconfig
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\BulkyBook.Models.AssemblyInfoInputs.cache
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\BulkyBook.Models.AssemblyInfo.cs
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\BulkyBook.Models.csproj.CoreCompileInputs.cache
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\BulkyBook.Models.dll
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\refint\BulkyBook.Models.dll
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\BulkyBook.Models.pdb
+F:\argu\c#\Bulky Book\BulkyBook.Models\obj\Debug\net6.0\ref\BulkyBook.Models.dll
