@@ -1,7 +1,8 @@
 ﻿using BulkyBook.DataAccess;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
+using System.Collections.Generic;
+
 
 namespace BulkyBookWeb.Controllers
 {
@@ -16,7 +17,7 @@ namespace BulkyBookWeb.Controllers
 
         public IActionResult Index()
         {
-            var objectTemplateList = _db.Templates.ToList();
+            IEnumerable<Template> objectTemplateList = _db.Templates ;
             return View(objectTemplateList);
         }
 
@@ -34,6 +35,7 @@ namespace BulkyBookWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                obj.CreatedAt = System.DateTime.Now;
                 _db.Templates.Add(obj);
                 _db.SaveChanges();
                 TempData["Success"] = obj.TemplateName + " is added successfully . ";
@@ -47,18 +49,21 @@ namespace BulkyBookWeb.Controllers
 
         //GET
         public IActionResult Edit(int? id)
-        {
-            if(id==null || id.Value==0)
+        
+       {
+            if(id==null || id==0)
             {
                 return NotFound();
             }
-            var TemplateFromDb = _db.Templates.Find(id);
-            if(TemplateFromDb==null)
-            {
-                return NotFound();
-            }
+            var templateFromDb = _db.Templates.Find(id);
 
-            return View(TemplateFromDb);
+            if(templateFromDb==null)
+            {
+                return NotFound();
+            }
+         
+
+            return View(templateFromDb);
         }
 
 
@@ -67,11 +72,12 @@ namespace BulkyBookWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Template obj)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
+                /*obj.CreatedAt = System.DateTime.Now;*/
                 _db.Templates.Update(obj);
                 _db.SaveChanges();
-                TempData["Success"] = obj.TemplateName + " is editted successfully . ";
+                TempData["Success"] =  " is added successfully . ";
                 return RedirectToAction("Index");
 
             }

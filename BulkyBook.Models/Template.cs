@@ -8,19 +8,17 @@ namespace BulkyBook.Models;
     public class Template
     {
         [Key]
-        [Identity]
         public int TemplateId { get; set; }
         [Required]
-        public string TemplateName { get; set; } = string.Empty;
+        public string TemplateName { get; set; }
+        
+        public int Order { get; set; } 
         [Required]
-      
-        public int Order { get; set; } = 0;
+        public DateTime CreatedAt { get; set; }
         [Required]
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public int CreatedBy { get; set; } 
         [Required]
-        public int CreatedBy { get; set; } = -1;
-        [Required]
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; }
         [Required]
         public int UpdatedBy { get; set; } = -1;
 
