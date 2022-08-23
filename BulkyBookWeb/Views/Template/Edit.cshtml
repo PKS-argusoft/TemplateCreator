@@ -1,5 +1,6 @@
 ﻿@model Template
 
+@Html.HiddenFor(m => m.TemplateId)
 
 <form method="post" asp-action="Edit">
 	<div class="border p-3 mt-4">
@@ -8,6 +9,7 @@
 			<hr />
 		</div>
 		@*<div asp-validation-summary="All"></div>*@
+		<input asp-for="TemplateId"  type="hidden"  class="form-control" />
 		<div class="mb-3">
 			<label asp-for="TemplateName"></label>
 			<input asp-for="TemplateName" class="form-control" />

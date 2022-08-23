@@ -61,7 +61,8 @@ namespace BulkyBookWeb.Controllers
             {
                 return NotFound();
             }
-         
+
+            TempData["old_name_store"] = templateFromDb.TemplateName;
 
             return View(templateFromDb);
         }
@@ -75,9 +76,10 @@ namespace BulkyBookWeb.Controllers
             if (ModelState.IsValid)
             {
                 /*obj.CreatedAt = System.DateTime.Now;*/
+                
                 _db.Templates.Update(obj);
                 _db.SaveChanges();
-                TempData["Success"] =  " is added successfully . ";
+                TempData["Success"] = TempData["old_name_store"] + " has been edited to " + obj.TemplateName + " successfully . "  ;
                 return RedirectToAction("Index");
 
             }
